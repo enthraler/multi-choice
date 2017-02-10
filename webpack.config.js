@@ -3,7 +3,6 @@ module.exports = {
     output: {
         path: './bin',
         filename: 'hello.bundle.js',
-        pathInfo: true,
         libraryTarget: 'amd',
     },
     module: {
@@ -11,5 +10,8 @@ module.exports = {
             {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
         ],
     },
-    externals: ['jquery'],
+    externals: {
+        'react': 'react/v15',
+        'react-dom': 'react-dom/v15',
+    },
 };

@@ -1,17 +1,16 @@
-import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-class Hello {
+export default class Hello {
     constructor(config) {
-        this.container = $(config.container);
+        this.container = config.container;
     }
 
     render(authorData) {
-        var greeting = `Hello ${authorData.name}, I am an AMD JS Module compiled with Webpack and Babel!`;
-        this.container.text(greeting);
+        var greeting = `Hello ${authorData.name}, I am an AMD JS Module compiled with Webpack, Babel and React!`;
+        ReactDOM.render(
+            <p>{greeting}</p>,
+            this.container
+        );
     }
 }
-
-// Please note, using es6 `export default ...` will not work with babel/webpack exporting an AMD module.
-// See http://stackoverflow.com/a/33506169/180995
-// So we use `module.exports = ...` directly.
-module.exports = Hello;
