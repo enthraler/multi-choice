@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = {
     entry: './src/hello.js',
     output: {
@@ -6,9 +8,24 @@ module.exports = {
         libraryTarget: 'amd',
     },
     module: {
-        loaders: [
-            {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
-        ],
+        rules: [
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: [path.resolve(__dirname, "node_modules")],
+                options: {
+                    presets: ['react', 'es2015']
+                }
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    'style-loader',
+                    { loader: 'css-loader', options: { importLoaders: 1 } },
+                    { loader: 'less-loader', options: { strictMath: true, noIeCompat: true } }
+                ]
+            }
+        ]
     },
     externals: {
         'react': 'react/v15',
