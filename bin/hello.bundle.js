@@ -458,17 +458,24 @@ var Hello = function () {
         _classCallCheck(this, Hello);
 
         this.container = config.container;
+        this.environment = config.environment;
     }
 
     _createClass(Hello, [{
         key: 'render',
         value: function render(authorData) {
+            var _this = this;
+
             var greeting = 'Hello ' + authorData.name + ', I am an AMD JS Module compiled with Webpack, Babel and React!';
             _reactDom2.default.render(_react2.default.createElement(
                 'h1',
                 null,
                 greeting
-            ), this.container);
+            ), this.container,
+            // After render, update the height of the iFrame.
+            function () {
+                return _this.environment.requestHeightChange();
+            });
         }
     }]);
 
