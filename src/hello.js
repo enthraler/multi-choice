@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import './hello.less';
 
 export default class Hello {
-    constructor(config) {
-        this.container = config.container;
-        this.environment = config.environment;
+    constructor(environment) {
+        this.container = environment.container;
+        this.environment = environment;
     }
 
     render(authorData) {

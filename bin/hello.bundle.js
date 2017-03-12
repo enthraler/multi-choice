@@ -454,11 +454,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Hello = function () {
-    function Hello(config) {
+    function Hello(environment) {
         _classCallCheck(this, Hello);
 
-        this.container = config.container;
-        this.environment = config.environment;
+        this.container = environment.container;
+        this.environment = environment;
     }
 
     _createClass(Hello, [{
