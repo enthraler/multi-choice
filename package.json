@@ -5,7 +5,8 @@
   "author": "Jason O'Neil",
   "license": "MIT",
   "scripts": {
-    "webpack": "node node_modules/webpack/bin/webpack.js"
+    "webpack": "node node_modules/webpack/bin/webpack.js",
+    "watch": "node node_modules/webpack/bin/webpack.js --watch"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
