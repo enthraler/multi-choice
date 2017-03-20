@@ -1,0 +1,23 @@
+{
+	"question": "Who is the current Australian Prime Minister?",
+	"clarification": "As of 18th March. Knowing Australian politics, it might change some time later today.",
+	"answers": [
+		{
+			"answer": "Julia Gillard",
+			"correct": false,
+			"specificFollowUp": "Incorrect. Julia Gillard was our first female Prime Minister, and was in power from 2010 until 2013."
+		},
+		{
+			"answer": "Malcolm Turnball",
+			"correct": true,
+			"specificFollowUp": "Correct"
+		},
+		{
+			"answer": "Tony Abbott",
+			"correct": false,
+			"specificFollowUp": "Incorrect. Tony Abbott was our previous Prime Minister, and was in power from 2013 until 2015 when the ruling Liberal party voted to change leadership."
+		}
+	],
+	"randomize": true,
+	"generalFollowUp": "Malcolm Turnball became Prime Minister on September 14th 2015, not through a popular vote, but because the ruling Liberal party chose to have him replace Tony Abbott as leader. He was re-elected in a federal election in 2016."
+}

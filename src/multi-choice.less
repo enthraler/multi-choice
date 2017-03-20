@@ -1,0 +1,54 @@
+.multi-choice-question {
+	.question {
+		font-size: 18px;
+	}
+	.answers {
+		list-style: none;
+		padding-left: 0;
+		@borderRadius: 5px;
+		li {
+			position: relative;
+			padding: 8px 8px 8px 64px;
+			display: block;
+			font-size: 16px;
+			margin: 0 0 30px 0;
+			border: 1px solid #CCCCCC;
+			border-radius: @borderRadius;
+			&.selected {
+				background: #CCCCCC;
+			}
+		}
+		.label {
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 48px;
+			margin-right: 8px;
+			line-height: 64px;
+			float: left;
+			text-align: center;
+			right: 10px;
+			background: #19568C;
+			color: white;
+			border-bottom-left-radius: @borderRadius;
+			border-top-left-radius: @borderRadius;
+			font-size: 18px;
+		}
+		.correct .label {
+			background: #327B33;
+		}
+		.incorrect .label {
+			background: #CE0D00;
+		}
+		p.answer {
+			line-height: 48px;
+			margin: 0;
+		}
+		li.selected p.answer {
+			font-weight: bold;
+		}
+	}
+	.clarification {
+	}
+}

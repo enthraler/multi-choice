@@ -1,10 +1,10 @@
 var path = require('path');
 
 module.exports = {
-    entry: './src/hello.js',
+    entry: './src/multi-choice.js',
     output: {
         path: './bin',
-        filename: 'hello.bundle.js',
+        filename: 'multi-choice.bundle.js',
         libraryTarget: 'amd',
     },
     module: {
